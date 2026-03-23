@@ -1,16 +1,13 @@
-
 import { categories } from "@/Data";
 import Image from "next/image";
 import Head from "next/head";
 import { ArrowUpRight } from "lucide-react";
 
-
 export default function ProductPage({ params }) {
-const { productId } = params;
+  const { productId } = params;
 
   const allProducts = categories.flatMap((c) => c.products);
   const product = allProducts.find((p) => p.id === productId);
-  
 
   if (!product) {
     return (
@@ -28,224 +25,237 @@ const { productId } = params;
         />
       </Head>
 
-      {/* 🟨 Title */}
-      <section className="w-full text-center py-5 md:py-16">
-        <h1 className="text-2xl sm:text-3xl mt-25  md:text-6xl font-bold text-black">
+      {/* 🔥 HERO TITLE */}
+      <section className="relative w-full text-center py-10 md:py-20 bg-gradient-to-b from-[#EEF4FF] to-white">
+        <h1 className="text-3xl  mt-12 sm:text-4xl md:text-6xl font-extrabold text-[#2F4FA2] tracking-tight">
           {product?.name}
         </h1>
+        <div className="w-24 h-[3px] bg-gradient-to-r from-[#2F4FA2] to-[#59B347] mx-auto mt-4 rounded-full"></div>
       </section>
 
-      {/* 🏭 Product Banner */}
+      {/* 🖼️ BANNER */}
       {product?.banner && (
-        <section className="relative  w-full h-[35vh] sm:h-[50vh] md:h-[75vh] overflow-hidden rounded-lg">
+        <section className="relative w-full h-[35vh] sm:h-[50vh] md:h-[75vh] overflow-hidden">
+          <div className="absolute inset-0 bg-black/10 z-10"></div>
           <Image
             src={product.banner}
             alt={`${product.name} Banner`}
             fill
-            className="object-cover md:px-30"
+            className="object-cover md:px-30 scale-105"
             priority
           />
         </section>
       )}
 
-      {/* 🧾 Product Description */}
-      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 md:mt-16 mb-16">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-semibold text-[#B57E1F] mb-6 border-b pb-2">
-          Product Description
-        </h2>
+      {/* 📄 DESCRIPTION */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 md:mt-20 mb-20">
+        <div className="bg-white  p-8 md:p-12 border border-gray-100">
 
-        <div className="space-y-6 text-base sm:text-lg leading-relaxed text-gray-800">
-          {(Array.isArray(product.description) ? product.description : []).map(
-            (block, i) => {
-              switch (block.type) {
-                case "h2":
-                  return (
-                    <h2
-                      key={i}
-                      className="text-xl sm:text-2xl md:text-3xl font-semibold mt-6"
-                    >
-                      {block.text}
-                    </h2>
-                  );
-                case "p":
-                  return (
-                    <p key={i} className="leading-relaxed mt-2">
-                      {block.text}
-                    </p>
-                  );
-                case "ul":
-                  return (
-                    <ul
-                      key={i}
-                      className="list-disc ml-5 sm:ml-6 space-y-2 mt-2 text-gray-800"
-                    >
-                      {block.items.map((item, j) => (
-                        <li key={j}>{item}</li>
-                      ))}
-                    </ul>
-                  );
-                default:
-                  return null;
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#2F4FA2] mb-8">
+            Product Description
+          </h2>
+
+          <div className="space-y-6 text-base sm:text-lg leading-relaxed text-gray-700">
+            {(Array.isArray(product.description) ? product.description : []).map(
+              (block, i) => {
+                switch (block.type) {
+                  case "h2":
+                    return (
+                      <h2
+                        key={i}
+                        className="text-xl sm:text-2xl md:text-3xl font-semibold text-[#2F4FA2] mt-6"
+                      >
+                        {block.text}
+                      </h2>
+                    );
+                  case "p":
+                    return <p key={i}>{block.text}</p>;
+                  case "ul":
+                    return (
+                      <ul key={i} className="space-y-2 mt-2">
+                        {block.items.map((item, j) => (
+                          <li key={j} className="flex items-start gap-3">
+                            <span className="w-2 h-2 mt-2 bg-[#59B347] rounded-full"></span>
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    );
+                  default:
+                    return null;
+                }
               }
-            }
-          )}
+            )}
+          </div>
+
         </div>
       </section>
 
-      {/* 📘 Helpful Resources */}
-      <section className="bg-gradient-to-r from-[#0076A8]/90 to-[#00A3C4]/80 py-14 sm:py-20 mt-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 text-center text-white">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-semibold mb-10 sm:mb-12">
+
+      {/* 🧾 SPECIFICATION MATRIX */}
+<section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+  
+  <h2 className="text-2xl md:text-3xl font-bold text-[#0B2A4A] mb-4">
+    SPECIFICATION MATRIX
+  </h2>
+
+  <div className="w-16 h-[3px] bg-green-600 mb-8 rounded-full"></div>
+
+  <div className="overflow-hidden rounded-xl border border-gray-200 shadow-md">
+
+    <table className="w-full text-left border-collapse">
+
+      {/* HEADER */}
+      <thead>
+        <tr className="bg-[#0A1F3C] text-white text-sm uppercase tracking-wide">
+          <th className="px-6 py-5 font-semibold">Parameter</th>
+          <th className="px-6 py-5 font-semibold">PX-700 Standard</th>
+          <th className="px-6 py-5 font-semibold">PX-900 Ultra</th>
+          <th className="px-6 py-5 font-semibold">PX-X Experimental</th>
+        </tr>
+      </thead>
+
+      {/* BODY */}
+      <tbody className="text-gray-700 text-sm">
+
+        <tr className="bg-[#F7F7F7]">
+          <td className="px-6 py-5 font-medium text-[#0B2A4A]">Torque Capacity</td>
+          <td className="px-6 py-5">450 Nm</td>
+          <td className="px-6 py-5 text-[#D4A44B] font-semibold">890 Nm</td>
+          <td className="px-6 py-5">1,200 Nm</td>
+        </tr>
+
+        <tr className="bg-white">
+          <td className="px-6 py-5 font-medium text-[#0B2A4A]">Material Composition</td>
+          <td className="px-6 py-5">Aluminum-Steel</td>
+          <td className="px-6 py-5">Grade 5 Titanium</td>
+          <td className="px-6 py-5">Carbon-Polymer</td>
+        </tr>
+
+        <tr className="bg-[#F7F7F7]">
+          <td className="px-6 py-5 font-medium text-[#0B2A4A]">Operating Voltage</td>
+          <td className="px-6 py-5">24V DC</td>
+          <td className="px-6 py-5">48V DC</td>
+          <td className="px-6 py-5">Variable 400V</td>
+        </tr>
+
+        <tr className="bg-white">
+          <td className="px-6 py-5 font-medium text-[#0B2A4A]">Protection Class</td>
+          <td className="px-6 py-5">IP65</td>
+          <td className="px-6 py-5">IP68 / IP69K</td>
+          <td className="px-6 py-5">Submersible</td>
+        </tr>
+
+        <tr className="bg-[#F7F7F7]">
+          <td className="px-6 py-5 font-medium text-[#0B2A4A]">Maintenance Cycle</td>
+          <td className="px-6 py-5">12,000 Hrs</td>
+          <td className="px-6 py-5">25,000 Hrs</td>
+          <td className="px-6 py-5">Condition Based</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+</section>
+
+      {/* ⚡ RESOURCES */}
+      <section className="bg-gradient-to-br from-[#2F4FA2] to-[#59B347] py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 text-center text-white">
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-12">
             Helpful Resources
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* 🧪 Request a Sample */}
-            <a
-              href="/contact-us"
-              className="bg-[#00B4D8] hover:bg-[#00C8F3] transition-all duration-300 rounded-lg p-8 sm:p-10 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="white"
-                className="w-10 h-10 sm:w-12 sm:h-12 mb-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21.75 6.75v10.5A2.25 2.25 0 0119.5 19.5h-15A2.25 2.25 0 012.25 17.25V6.75m19.5 0l-9.75 7.5-9.75-7.5"
-                />
-              </svg>
-              <h3 className="text-xl sm:text-2xl font-medium">
-                Request a Sample
-              </h3>
-            </a>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {/* 🧾 SDS */}
-            <a
-              href={product.pdfs?.sds || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#0096C7] hover:bg-[#00B4D8] transition-all duration-300 rounded-lg p-8 sm:p-10 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="white"
-                className="w-10 h-10 sm:w-12 sm:h-12 mb-4"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19.5 14.25v-6.75a2.25 2.25 0 00-2.25-2.25h-10.5A2.25 2.25 0 004.5 7.5v9a2.25 2.25 0 002.25 2.25h7.5l4.5 3v-3.75a2.25 2.25 0 002.25-2.25z"
-                />
-              </svg>
-              <h3 className="text-xl sm:text-2xl font-medium">
-                Safety Data Sheets (SDS)
-              </h3>
-            </a>
+            {[{
+              title: "Request a Sample",
+              link: "/contact-us"
+            },
+            {
+              title: "Safety Data Sheets (SDS)",
+              link: product.pdfs?.sds || "#"
+            },
+            {
+              title: "Technical Data Sheets (TDS)",
+              link: product.pdfs?.tds || "#"
+            }].map((item, i) => (
 
-            {/* 📄 TDS */}
-            <a
-              href={product.pdfs?.tds || "#"}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-[#0096C7] hover:bg-[#00B4D8] transition-all duration-300 rounded-lg p-8 sm:p-10 flex flex-col items-center justify-center shadow-lg hover:shadow-2xl"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="white"
-                className="w-10 h-10 sm:w-12 sm:h-12 mb-4"
+              <a
+                key={i}
+                href={item.link}
+                target="_blank"
+                className="group bg-white/10 backdrop-blur-md border border-white/20 p-10 rounded-3xl shadow-xl hover:scale-105 transition-all duration-500"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 6v6l4 2m6 0a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
-              </svg>
-              <h3 className="text-xl sm:text-2xl font-medium">
-                Technical Data Sheets (TDS)
-              </h3>
-            </a>
+                <h3 className="text-xl md:text-2xl font-semibold group-hover:text-yellow-300 transition">
+                  {item.title}
+                </h3>
+              </a>
+
+            ))}
+
           </div>
         </div>
       </section>
 
-      {/* 🧩 Related Products */}
-   <section className="mt-16 md:mt-20 px-4 sm:px-8 mb-16">
-  <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-semibold text-[#014AAB] text-center border-b pb-2 inline-block">
-    Related Items
-  </h2>
+      {/* 🔗 RELATED */}
+      <section className="mt-20 px-4 sm:px-8 mb-20">
 
-  {(() => {
-    const categoryObj = categories.find((c) =>
-      c.products.some((p) => p.id === product.id)
-    );
+        <h2 className="text-3xl md:text-5xl font-semibold text-[#2F4FA2] text-center mb-12">
+          Related Products
+        </h2>
 
-    const related = categoryObj
-      ? categoryObj.products.filter((p) => p.id !== product.id)
-      : [];
+        {(() => {
+          const categoryObj = categories.find((c) =>
+            c.products.some((p) => p.id === product.id)
+          );
 
-    if (!related.length) {
-      return (
-        <div className="mt-10 text-center text-gray-500 text-lg">
-          No related items found in this category.
-        </div>
-      );
-    }
+          const related = categoryObj
+            ? categoryObj.products.filter((p) => p.id !== product.id)
+            : [];
 
-    return (
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mt-10">
-        {related.slice(0, 4).map((relatedProduct) => (
-          <div
-            key={relatedProduct.id}
-            className="group flex flex-col rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-xl transform transition-all duration-300 hover:-translate-y-2"
-          >
-            <div className="p-6 flex flex-col flex-grow bg-[#B6E0EC]/40">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-black group-hover:text-[#0082C8] transition-colors duration-300">
-                {relatedProduct.name}
-              </h3>
+          return (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 
-              {relatedProduct.model && (
-                <p className="text-sm text-gray-500 mb-3">
-                  {relatedProduct.model}
-                </p>
-              )}
+              {related.slice(0, 4).map((relatedProduct) => (
 
-              <div className="space-y-2 text-sm md:text-base text-black">
-                {(relatedProduct.excerpt || [])
-                  .filter((b) => b.type === "p")
-                  .map((block, idx) => (
-                    <p key={idx} className="leading-relaxed">
-                      {block.text}
-                    </p>
-                  ))}
-              </div>
+                <div
+                  key={relatedProduct.id}
+                  className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+                >
 
-              <a
-                href={`/products/${relatedProduct.id}`}
-                className="mt-6 inline-flex items-center justify-center gap-2 px-5 py-2 bg-gradient-to-r from-[#00537B] to-[#0082C8] text-white rounded-lg font-medium hover:scale-105 transition-transform duration-300"
-              >
-                View Details <ArrowUpRight className="w-4 h-4" />
-              </a>
+                  <div className="p-6 flex flex-col h-full bg-gradient-to-b from-[#EEF4FF] to-white">
 
-              <span className="block h-1 w-0 bg-gradient-to-r from-[#8AB0C2] to-[#0082C8] rounded-full mt-4 transition-all duration-300 group-hover:w-full mx-auto"></span>
+                    <h3 className="text-xl font-semibold text-[#2F4FA2] mb-4 group-hover:text-[#59B347] transition">
+                      {relatedProduct.name}
+                    </h3>
+
+                    <div className="text-sm text-gray-600 space-y-2 flex-grow">
+                      {(relatedProduct.excerpt || [])
+                        .filter((b) => b.type === "p")
+                        .map((block, idx) => (
+                          <p key={idx}>{block.text}</p>
+                        ))}
+                    </div>
+
+                    <a
+                      href={`/products/${relatedProduct.id}`}
+                      className="mt-6 inline-flex items-center justify-center gap-2 px-5 py-2 bg-gradient-to-r from-[#2F4FA2] to-[#59B347] text-white rounded-full font-medium hover:scale-105 transition"
+                    >
+                      View Details <ArrowUpRight className="w-4 h-4" />
+                    </a>
+
+                  </div>
+
+                </div>
+
+              ))}
+
             </div>
-          </div>
-        ))}
-      </div>
-    );
-  })()}
-</section>
-
+          );
+        })()}
+      </section>
     </>
   );
 }

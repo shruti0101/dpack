@@ -360,7 +360,7 @@ export default function ProductSection() {
         {/* RIGHT SIDE - SWIPER */}
         <div className="w-[65%]  relative overflow-hidden">
 
-          <div className="bg-[#F8F8F8] h-[500px] rounded-[50px] px-16 py-24 relative">
+          <div className="bg-white h-[500px] rounded-[50px] px-16 py-24 relative">
 
             {/* CUSTOM ARROWS */}
             <button className="swiper-prev absolute left-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-green-500 hover:text-white transition">
@@ -584,7 +584,7 @@ export default function ProductSection() {
    {/* RIGHT SIDE - SWIPER */}
         <div className="w-[65%] relative overflow-hidden">
 
-          <div className="bg-[#F8F8F8] h-[500px] rounded-[60px] px-16 py-14 relative">
+          <div className="bg-white h-[500px] rounded-[60px] px-16 py-14 relative">
 
             {/* CUSTOM ARROWS */}
             <button className="swiper-prev absolute left-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-green-500 hover:text-white transition">

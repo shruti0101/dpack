@@ -4,132 +4,87 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaChevronDown } from "react-icons/fa";
 import Image from "next/image";
 
-
-
 export default function PremiumFAQ() {
-
-
-
-
-
-
-const faqs = [
-  {
-    question: "What are Dunnage Bags and why are they used?",
-    answer: `Dunnage Bags, also known as air bags or cargo securing bags, are inflatable packaging solutions used to fill voids between cargo during transportation. They prevent movement, absorb shocks, and reduce the risk of damage in transit.
+  const faqs = [
+    {
+      question: "What are Dunnage Bags and why are they used?",
+      answer: `Dunnage Bags, also known as air bags or cargo securing bags, are inflatable packaging solutions used to fill voids between cargo during transportation. They prevent movement, absorb shocks, and reduce the risk of damage in transit.
 
 These bags are widely used in shipping containers, trucks, railcars, and vessels to ensure load stability and safety, especially for fragile or high-value goods.`,
-  },
-  {
-    question: "What types of Dunnage Bags do you manufacture?",
-    answer: `We manufacture a wide range of Dunnage Bags suitable for different load types and transport conditions:
+    },
+    {
+      question: "What types of Dunnage Bags do you manufacture?",
+      answer: `We manufacture a wide range of Dunnage Bags suitable for different load types and transport conditions:
 • Paper Dunnage Bags – Ideal for dry container shipments and cost-effective applications.
 • Woven Polypropylene Dunnage Bags – Strong, moisture-resistant, and reusable.
 • Kraft Dunnage Bags – High strength with multiple layers for heavy-duty use.
-• Laminated Dunnage Bags – Enhanced durability and air retention for long-distance shipping.
+• Laminated Dunnage Bags – Enhanced durability and air retention for long-distance shipping.`,
+    },
+    {
+      question: "What industries use Dunnage Bags?",
+      answer: `Dunnage Bags are widely used across various industries, including:
+• Logistics & Freight Forwarding
+• Automotive
+• FMCG & Retail
+• Chemicals & Pharmaceuticals
+• Food & Agriculture`,
+    },
+    {
+      question: "How do Dunnage Bags improve cargo safety?",
+      answer: `Dunnage Bags fill empty spaces between cargo units, preventing movement caused by vibration or sudden braking.
 
-All our bags are designed to meet international safety and performance standards.`,
-  },
-  {
-    question: "What industries use Dunnage Bags?",
-    answer: `Dunnage Bags are widely used across various industries, including:
-• Logistics & Freight Forwarding – Secure cargo in containers and trucks.
-• Automotive – Protect parts and components during transit.
-• FMCG & Retail – Prevent shifting of packaged goods.
-• Chemicals & Pharmaceuticals – Ensure safe transport of sensitive materials.
-• Food & Agriculture – Maintain product integrity during long journeys.`,
-  },
-  {
-    question: "How do Dunnage Bags improve cargo safety?",
-    answer: `Dunnage Bags fill empty spaces between cargo units, preventing movement caused by vibration, sudden braking, or impact. They distribute pressure evenly and absorb shocks, reducing product damage and improving load stability.
-
-This not only protects goods but also minimizes claims, losses, and operational risks during transportation.`,
-  },
-  {
-    question: "Are your Dunnage Bags compliant with international standards?",
-    answer: `Yes, all our Dunnage Bags are manufactured in compliance with global quality and safety standards:
-• AAR (Association of American Railroads) Certification
+They distribute pressure evenly and absorb shocks, reducing product damage and improving load stability.`,
+    },
+    {
+      question: "Are your Dunnage Bags compliant with international standards?",
+      answer: `Yes, our bags comply with global standards including:
+• AAR Certification
 • ISO Quality Standards
-• SGS Tested Materials
+• SGS Tested Materials`,
+    },
+    {
+      question: "What sizes and strengths are available?",
+      answer: `We offer various sizes and strengths:
+• Level 1 to Level 5 ratings
+• Custom sizes
+• High and standard pressure options.`,
+    },
+    {
+      question: "Are Dunnage Bags reusable and eco-friendly?",
+      answer: `Yes. Many woven polypropylene bags are reusable and we focus on sustainable materials and eco-friendly manufacturing.`,
+    },
+    {
+      question: "Do you provide customization and branding?",
+      answer: `Yes we offer:
+• Custom sizes
+• Private labeling
+• Logo printing on bags.`,
+    },
+    {
+      question: "How can I select the right Dunnage Bag?",
+      answer: `Our experts help with load analysis, gap assessment, and recommend the correct bag strength and size.`,
+    },
+    {
+      question: "How can I request samples or place an order?",
+      answer: `Contact our team via phone, email, or website form. We provide samples, competitive pricing, and fast delivery.`,
+    },
+  ];
 
-We ensure consistent quality, durability, and performance across all our products.`,
-  },
-  {
-    question: "What sizes and strengths are available?",
-    answer: `We offer Dunnage Bags in a wide range of sizes and load-bearing capacities to suit different cargo requirements:
-• Level 1 to Level 5 strength ratings
-• Custom sizes based on container gaps
-• High-pressure and standard-pressure options
+  const [openId, setOpenId] = useState(null);
 
-Our team can help you choose the right size and strength based on your shipment type.`,
-  },
-  {
-    question: "Are Dunnage Bags reusable and eco-friendly?",
-    answer: `Yes, many of our Dunnage Bags, especially woven polypropylene types, are reusable and designed for multiple uses. We also focus on eco-friendly materials and manufacturing processes to minimize environmental impact.
-
-Our products support sustainable logistics while maintaining high performance.`,
-  },
-  {
-    question: "Do you provide customization and branding?",
-    answer: `Absolutely. We offer customization options including:
-• Custom sizes and specifications
-• Private labeling and branding
-• Printing logos and instructions on bags
-
-This helps businesses maintain brand identity while ensuring effective cargo protection.`,
-  },
-  {
-    question: "How can I select the right Dunnage Bag for my cargo?",
-    answer: `Selecting the right Dunnage Bag depends on factors like cargo weight, gap size, transport mode, and environmental conditions.
-
-Our experts provide complete guidance including:
-• Load analysis and gap assessment
-• Recommended bag type and strength level
-• Inflation guidelines and best practices
-
-We ensure you get the most effective and safe solution for your shipments.`,
-  },
-  {
-    question: "How can I request samples or place an order?",
-    answer: `You can easily request samples or place orders by contacting our team via phone, email, or website inquiry form.
-
-We provide:
-• Product samples for testing
-• Competitive pricing based on quantity
-• Fast production and reliable delivery
-
-Our team ensures a smooth and hassle-free ordering experience from start to finish.`,
-  },
-];
-
-
-   const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleFAQ = (index) => {
-    setOpenIndex((prev) => (prev === index ? null : index));
+  const toggleFAQ = (id) => {
+    setOpenId((prev) => (prev === id ? null : id));
   };
 
-
-  
-
-
-
-
-
- 
   return (
-    <section className="relative py-16 md:py-24 px-6 lg:px-16 overflow-hidden bg-gradient-to-br from-orange-50 via-white to-orange-100">
-
-      {/* ORANGE GLOW */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,115,0,0.15),transparent_60%)] pointer-events-none"></div>
-
+    <section className="relative py-16 md:py-20 px-6 lg:px-16 overflow-hidden">
       {/* Floating Elements */}
       <motion.div
         animate={{ y: [0, -20, 0] }}
         transition={{ duration: 6, repeat: Infinity }}
         className="absolute top-10 left-0 hidden md:block opacity-50"
       >
-        <Image src="/atoms.webp" width={260} height={260} alt="" />
+        <Image src="/fagimg.png" width={260} height={260} alt="" />
       </motion.div>
 
       <motion.div
@@ -137,7 +92,7 @@ Our team ensures a smooth and hassle-free ordering experience from start to fini
         transition={{ duration: 6, repeat: Infinity }}
         className="absolute bottom-10 right-0 hidden md:block opacity-50"
       >
-        <Image src="/atoms.webp" width={260} height={260} alt="" />
+        <Image src="/aboutimg.png" width={260} height={260} alt="" />
       </motion.div>
 
       {/* Heading */}
@@ -152,24 +107,24 @@ Our team ensures a smooth and hassle-free ordering experience from start to fini
 
       {/* GRID */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6 relative z-10">
-     {faqs.map((faq, index) => {
-  const isOpen = openIndex === index;
+        {faqs.map((faq, index) => {
+          const id = `faq-${index}`;
+          const isOpen = openId === id;
 
-  return (
-    <motion.div
-      key={faq.question} // ✅ FIXED (IMPORTANT)
-      layout
-      className={`rounded-2xl border backdrop-blur-xl transition-all duration-300
-      ${
-        isOpen
-          ? "bg-orange-50 border-orange-300 shadow-xl"
-          : "bg-white/70 border-white/40 hover:shadow-xl"
-      }`}
-    >
-            
+          return (
+            <motion.div
+              key={id}
+              layout
+              className={`rounded-2xl border backdrop-blur-xl transition-all duration-300
+${
+  isOpen
+    ? "bg-orange-50 border-orange-300 shadow-xl"
+    : "bg-white/70 border-white/40 hover:shadow-xl"
+}`}
+            >
               {/* Question */}
               <button
-                onClick={() => toggleFAQ(index)}
+                onClick={() => toggleFAQ(id)}
                 className="w-full flex justify-between items-center px-6 py-5 text-left"
               >
                 <span
@@ -182,9 +137,7 @@ Our team ensures a smooth and hassle-free ordering experience from start to fini
 
                 <FaChevronDown
                   className={`ml-4 transition-transform duration-300 ${
-                    isOpen
-                      ? "rotate-180 text-orange-500"
-                      : "text-gray-500"
+                    isOpen ? "rotate-180 text-orange-500" : "text-gray-500"
                   }`}
                 />
               </button>
@@ -193,7 +146,6 @@ Our team ensures a smooth and hassle-free ordering experience from start to fini
               <AnimatePresence initial={false}>
                 {isOpen && (
                   <motion.div
-                    key="content"
                     initial={{ height: 0, opacity: 0 }}
                     animate={{ height: "auto", opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}

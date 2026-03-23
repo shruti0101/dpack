@@ -35,13 +35,13 @@ export default function ProductPage({ params }) {
 
       {/* 🖼️ BANNER */}
       {product?.banner && (
-        <section className="relative w-full h-[35vh] sm:h-[50vh] md:h-[75vh] overflow-hidden">
-          <div className="absolute inset-0 bg-black/10 z-10"></div>
+        <section className="relative w-full h-screen overflow-hidden">
+        
           <Image
             src={product.banner}
             alt={`${product.name} Banner`}
             fill
-            className="object-cover md:px-30 scale-105"
+            className="object-cover md:px-30 "
             priority
           />
         </section>
@@ -227,17 +227,20 @@ export default function ProductPage({ params }) {
 
                   <div className="p-6 flex flex-col h-full bg-gradient-to-b from-[#EEF4FF] to-white">
 
-                    <h3 className="text-xl font-semibold text-[#2F4FA2] mb-4 group-hover:text-[#59B347] transition">
+                    <h3 className="text-2xl font-semibold text-[#2F4FA2] mb-4 group-hover:text-[#59B347] transition text-center">
                       {relatedProduct.name}
                     </h3>
 
-                    <div className="text-sm text-gray-600 space-y-2 flex-grow">
-                      {(relatedProduct.excerpt || [])
-                        .filter((b) => b.type === "p")
-                        .map((block, idx) => (
-                          <p key={idx}>{block.text}</p>
-                        ))}
-                    </div>
+                  
+{/* PRODUCT IMAGE */}
+<div className="relative w-full h-[260px] my-4 overflow-hidden rounded-xl">
+  <Image
+    src={relatedProduct.banner || "/placeholder.jpg"}
+    alt={relatedProduct.name}
+    fill
+    className="object-cover transition-transform duration-500 group-hover:scale-110"
+  />
+</div>
 
                     <a
                       href={`/products/${relatedProduct.id}`}

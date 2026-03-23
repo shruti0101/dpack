@@ -16,7 +16,7 @@ export const categories = [
   metaTitle: "Dunnage Bags Manufacturer | High Strength Cargo Protection Bags",
   metaDescription:
     "High quality Dunnage Bags designed to stabilize cargo during transportation. Ideal for shipping containers, trucks, and railcars to prevent load shifting and product damage.",
-  banner: "/dunnage_bag_4k_banner.png",
+  banner: "/singleprod.webp",
 
   excerpt: [
     {
@@ -69,14 +69,16 @@ export const categories = [
   },
 },
 
+
+// 2
    {
   id: "polypropylene",
-  name: "Polypropylene",
+  name: "Premium Dunnage Air Bag",
   metaTitle: "Polypropylene Material for Dunnage Bags | High Strength Packaging Material",
   metaDescription:
     "High-quality Polypropylene material used in the manufacturing of strong and durable dunnage bags. Provides excellent strength, flexibility, and moisture resistance for cargo protection.",
 
-  banner: "/products/250.webp",
+  banner: "/check/prod1.webp",
 
   excerpt: [
     {
@@ -134,6 +136,205 @@ export const categories = [
   },
 },
 
+
+// 3
+   {
+  id: "polypropylene",
+  name: "Paper Dunnage Bags",
+  metaTitle: "Polypropylene Material for Dunnage Bags | High Strength Packaging Material",
+  metaDescription:
+    "High-quality Polypropylene material used in the manufacturing of strong and durable dunnage bags. Provides excellent strength, flexibility, and moisture resistance for cargo protection.",
+
+  banner: "/check/prod2.png",
+
+  excerpt: [
+    {
+      type: "p",
+      text: "Polypropylene is a high-strength woven material widely used in the production of dunnage bags and industrial packaging. It offers excellent durability, flexibility, and resistance to moisture, making it ideal for protecting cargo during transportation.",
+    },
+  ],
+
+  description: [
+    { type: "h2", text: "Polypropylene" },
+
+    {
+      type: "p",
+      text: "Polypropylene is a versatile and durable thermoplastic polymer commonly used in the manufacturing of woven dunnage bags and cargo securing solutions. Due to its excellent strength-to-weight ratio, chemical resistance, and flexibility, polypropylene provides reliable support for stabilizing loads during transportation.",
+    },
+
+    {
+      type: "p",
+      text: "In logistics and shipping applications, polypropylene-based dunnage bags are designed to fill gaps between cargo and prevent load shifting. The material ensures long-lasting performance even under heavy loads and harsh shipping conditions.",
+    },
+
+    { type: "h2", text: "Key Features – Polypropylene" },
+
+    {
+      type: "ul",
+      items: [
+        "High tensile strength for heavy-duty cargo support",
+        "Excellent resistance to moisture and environmental conditions",
+        "Lightweight yet highly durable material",
+        "Reusable and cost-effective for logistics operations",
+        "Flexible structure that adapts to different cargo shapes",
+      ],
+    },
+
+    {
+      type: "h2",
+      text: "Applications – Polypropylene is widely used in:",
+    },
+
+    {
+      type: "ul",
+      items: [
+        "Manufacturing woven dunnage bags",
+        "Cargo securing solutions for shipping containers",
+        "Industrial packaging and protective materials",
+        "Logistics and freight transportation",
+        "Heavy-duty storage and transport applications",
+      ],
+    },
+  ],
+
+  pdfs: {
+    sds: "/sds2.pdf",
+    tds: "/products/250.pdf",
+  },
+},
+
+
+
+// 4
+   {
+  id: "polypropylene",
+  name: "Woven Air Bags",
+  metaTitle: "Polypropylene Material for Dunnage Bags | High Strength Packaging Material",
+  metaDescription:
+    "High-quality Polypropylene material used in the manufacturing of strong and durable dunnage bags. Provides excellent strength, flexibility, and moisture resistance for cargo protection.",
+
+  banner: "/check/prod3.png",
+
+  excerpt: [
+    {
+      type: "p",
+      text: "Polypropylene is a high-strength woven material widely used in the production of dunnage bags and industrial packaging. It offers excellent durability, flexibility, and resistance to moisture, making it ideal for protecting cargo during transportation.",
+    },
+  ],
+
+  description: [
+    { type: "h2", text: "Polypropylene" },
+
+    {
+      type: "p",
+      text: "Polypropylene is a versatile and durable thermoplastic polymer commonly used in the manufacturing of woven dunnage bags and cargo securing solutions. Due to its excellent strength-to-weight ratio, chemical resistance, and flexibility, polypropylene provides reliable support for stabilizing loads during transportation.",
+    },
+
+    {
+      type: "p",
+      text: "In logistics and shipping applications, polypropylene-based dunnage bags are designed to fill gaps between cargo and prevent load shifting. The material ensures long-lasting performance even under heavy loads and harsh shipping conditions.",
+    },
+
+    { type: "h2", text: "Key Features – Polypropylene" },
+
+    {
+      type: "ul",
+      items: [
+        "High tensile strength for heavy-duty cargo support",
+        "Excellent resistance to moisture and environmental conditions",
+        "Lightweight yet highly durable material",
+        "Reusable and cost-effective for logistics operations",
+        "Flexible structure that adapts to different cargo shapes",
+      ],
+    },
+
+    {
+      type: "h2",
+      text: "Applications – Polypropylene is widely used in:",
+    },
+
+    {
+      type: "ul",
+      items: [
+        "Manufacturing woven dunnage bags",
+        "Cargo securing solutions for shipping containers",
+        "Industrial packaging and protective materials",
+        "Logistics and freight transportation",
+        "Heavy-duty storage and transport applications",
+      ],
+    },
+  ],
+
+  pdfs: {
+    sds: "/sds2.pdf",
+    tds: "/products/250.pdf",
+  },
+},
+
+   {
+  id: "polypropylene",
+  name: "Polypropylene",
+  metaTitle: "Polypropylene Material for Dunnage Bags | High Strength Packaging Material",
+  metaDescription:
+    "High-quality Polypropylene material used in the manufacturing of strong and durable dunnage bags. Provides excellent strength, flexibility, and moisture resistance for cargo protection.",
+
+  banner: "/check/prod4.webp",
+
+  excerpt: [
+    {
+      type: "p",
+      text: "Polypropylene is a high-strength woven material widely used in the production of dunnage bags and industrial packaging. It offers excellent durability, flexibility, and resistance to moisture, making it ideal for protecting cargo during transportation.",
+    },
+  ],
+
+  description: [
+    { type: "h2", text: "Polypropylene" },
+
+    {
+      type: "p",
+      text: "Polypropylene is a versatile and durable thermoplastic polymer commonly used in the manufacturing of woven dunnage bags and cargo securing solutions. Due to its excellent strength-to-weight ratio, chemical resistance, and flexibility, polypropylene provides reliable support for stabilizing loads during transportation.",
+    },
+
+    {
+      type: "p",
+      text: "In logistics and shipping applications, polypropylene-based dunnage bags are designed to fill gaps between cargo and prevent load shifting. The material ensures long-lasting performance even under heavy loads and harsh shipping conditions.",
+    },
+
+    { type: "h2", text: "Key Features – Polypropylene" },
+
+    {
+      type: "ul",
+      items: [
+        "High tensile strength for heavy-duty cargo support",
+        "Excellent resistance to moisture and environmental conditions",
+        "Lightweight yet highly durable material",
+        "Reusable and cost-effective for logistics operations",
+        "Flexible structure that adapts to different cargo shapes",
+      ],
+    },
+
+    {
+      type: "h2",
+      text: "Applications – Polypropylene is widely used in:",
+    },
+
+    {
+      type: "ul",
+      items: [
+        "Manufacturing woven dunnage bags",
+        "Cargo securing solutions for shipping containers",
+        "Industrial packaging and protective materials",
+        "Logistics and freight transportation",
+        "Heavy-duty storage and transport applications",
+      ],
+    },
+  ],
+
+  pdfs: {
+    sds: "/sds2.pdf",
+    tds: "/products/250.pdf",
+  },
+},
       
     ],
   },

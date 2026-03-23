@@ -8,7 +8,7 @@ export default function AboutSection() {
 
         <div className="absolute w-[720px] h-[620px] top-0 right-0 -z-10 ">
             <Image
-              src="/dd.png" // 👉 your soft shape image
+              src="/dd.png"
               alt="shape"
               fill
               className="object-cover opacity-80"
@@ -21,29 +21,29 @@ export default function AboutSection() {
         <div className="bg-white ">
 
           <h1 className="text-2xl font-bold text-gray-900 mb-2">
-            Vands Engineering Solutions
+            Dpack Packaging Solutions
           </h1>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-tight">
             <span className="text-gray-900">
-              Leading Airless Painting Machine
+              Leading Dunnage Bags
             </span>
             <br />
             <span className="text-red-500">
-              Manufacturer & Wholesaler
+              Manufacturer & Supplier
             </span>
           </h2>
 
           <p className="text-gray-600 mb-4 leading-relaxed">
-            At Vands Engineering Solutions, we are recognized as a premier Airless Painting Machine Manufacturer, offering cutting-edge solutions designed to deliver superior performance, efficiency, and durability.
+            At Dpack Packaging Solutions, we specialize in manufacturing high-quality Dunnage Bags designed to secure cargo during transportation and prevent load shifting in containers, trucks, and railcars.
           </p>
 
           <p className="text-gray-600 mb-4 leading-relaxed">
-            With years of industry expertise, we have established ourselves as a reliable Airless Painting Machine Wholesaler and supplier.
+            With extensive industry experience, we have become a trusted Dunnage Bags manufacturer and supplier providing reliable packaging solutions for logistics, shipping, and industrial sectors.
           </p>
 
           <p className="text-gray-600 leading-relaxed">
-            Our advanced machines ensure smooth, uniform coating with high efficiency and minimal wastage.
+            Our durable and high-strength dunnage bags ensure maximum cargo protection, improved load stability, and cost-effective transportation safety for global supply chains.
           </p>
 
           {/* CTA */}
@@ -56,12 +56,10 @@ export default function AboutSection() {
         {/* RIGHT SIDE */}
         <div className="relative ">
 
-
-          {/* 🔥 PRODUCT */}
           <div className="relative z-10">
             <Image
               src="/aboutimg.png"
-              alt="Airless Painting Machine"
+              alt="Dunnage Bags"
               width={500}
               height={400}
               className="object-cover float-animation "

@@ -11,8 +11,8 @@ const slides = [
     highlightBlue: "Manufacturer",
     highlightGreen: "& Supplier",
     desc: "Supplying reliable Material Handling & Industrial Packaging Solutions across the UAE & GCC",
-    img1: "/check1.webp",
-    img2: "/check2.png",
+    img1: "/check/background.webp",
+    img2: "/check/bg1.webp",
   },
   {
     id: 2,
@@ -20,17 +20,58 @@ const slides = [
     highlightBlue: "Durable",
     highlightGreen: "& Efficient",
     desc: "Engineered for performance, built for long-term industrial usage",
-    img1: "/check3.jpg",
-    img2: "/check4.avif",
+    img1: "/check/background.webp",
+    img2: "/check/bg2.webp",
+  },
+
+    {
+    id: 3,
+    title: "High Quality Plastic Solutions",
+    highlightBlue: "Durable",
+    highlightGreen: "& Efficient",
+    desc: "Engineered for performance, built for long-term industrial usage",
+    img1: "/check/background.webp",
+    img2: "/check/bg3.webp",
+  },
+
+    {
+    id: 4,
+    title: "High Quality Plastic Solutions",
+    highlightBlue: "Durable",
+    highlightGreen: "& Efficient",
+    desc: "Engineered for performance, built for long-term industrial usage",
+    img1: "/check/background.webp",
+    img2: "/check/bg4.webp",
+  },
+
+     {
+    id: 5,
+    title: "High Quality Plastic Solutions",
+    highlightBlue: "Durable",
+    highlightGreen: "& Efficient",
+    desc: "Engineered for performance, built for long-term industrial usage",
+    img1: "/check/background.webp",
+    img2: "/check/bg5.webp",
+  },
+
+     {
+    id: 6,
+    title: "High Quality Plastic Solutions",
+    highlightBlue: "Durable",
+    highlightGreen: "& Efficient",
+    desc: "Engineered for performance, built for long-term industrial usage",
+    img1: "/check/background.webp",
+    img2: "/check/bg6.webp",
   },
 ];
 
 const categories = [
-  "Plastic Pallets",
-  "Crates",
-  "Pallet Boxes",
-  "Spill Pallets",
-  "Waste Bins",
+  "Dunnage Bags",
+
+  "Gap Fillers",
+  "Aircolumn Rolls",
+  "Courier Bags",
+  "Air Bags",
   "other products"
  
 ];
@@ -188,8 +229,8 @@ export default function HeroSection() {
             >
               <Image
                 src={slides[active].img2}
-                width={260}
-                height={260}
+                width={560}
+                height={460}
                 alt=""
                 className="object-cover drop-shadow-xl"
               />
@@ -216,10 +257,11 @@ export default function HeroSection() {
     />
 
     {categories.map((item, index) => (
-      <div
-        key={index}
-        className="flex items-center uppercase justify-end gap-3 space-y-5 cursor-pointer relative"
-      >
+   <div
+  key={index}
+  onClick={() => setActive(index)}
+  className="flex items-center uppercase justify-end gap-3 space-y-5 cursor-pointer relative"
+>
         {/* TEXT */}
         <span
           className={`text-md ${

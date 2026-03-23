@@ -71,7 +71,7 @@ export default function HomeProducts() {
 
         {/* ===== Product Grid ===== */}
         <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
-      {featuredProducts.map((product) => (
+{featuredProducts.map((product) => (
   <Link
     key={product.id}
     href={`/products/${product.id}`}
@@ -85,14 +85,21 @@ export default function HomeProducts() {
         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
       />
 
-      {/* 🔥 OVERLAY (SLIDE FROM TOP) */}
-      <div className="absolute inset-0 bg-gradient-to-b from-orange-500/80 to-white/60 
-        translate-y-[-100%] group-hover:translate-y-0 
+      {/* 🔹 PRODUCT NAME (VISIBLE ALWAYS) */}
+      <div className="absolute bottom-0 left-0 w-full bg-white backdrop-blur-md text-black capitalize py-3 text-center">
+        <h3 className="text-lg font-semibold tracking-wide">
+          {product.name}
+        </h3>
+      </div>
+
+      {/* 🔥 HOVER OVERLAY */}
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-orange-500/90 to-black/70
+        translate-y-[-100%] group-hover:translate-y-0
         transition-transform duration-500 ease-in-out flex flex-col justify-center items-center text-center p-6"
       >
-
         {/* TITLE */}
-        <h3 className="text-white text-lg font-bold mb-2">
+        <h3 className="text-white text-xl font-bold mb-3">
           {product.name}
         </h3>
 
@@ -110,9 +117,8 @@ export default function HomeProducts() {
 
         {/* BUTTON */}
         <span className="px-5 py-2 rounded-full bg-white text-black font-semibold text-sm hover:bg-orange-500 hover:text-white transition">
-          View Product 
+          View Product
         </span>
-
       </div>
     </div>
   </Link>
@@ -123,7 +129,7 @@ export default function HomeProducts() {
         <div className="text-center">
           <Link
             href="/products"
-            className="inline-block  px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gradient-to-r from-[#8AB0C2] to-[#0082C8] text-white text-lg sm:text-lg md:text-xl font-semibold shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
+            className="inline-block  px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gradient-to-r from-orange-500 to-orange-700 text-white text-lg sm:text-lg md:text-xl font-semibold shadow-md hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
             See All Products
           </Link>

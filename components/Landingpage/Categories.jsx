@@ -226,83 +226,83 @@ export default function ProductSection() {
 
   const products1 = [
     {
-      img: "/check2.png",
+      img: "/check/prod1.webp",
       title: "Standard Dunnage Air Bag",
       size: "For Container & Truck Load Securing",
     },
     {
-      img: "/check1.webp",
+      img: "/check/prod2.png",
       title: "Heavy Duty Air Bag",
       size: "High Pressure Load Stabilization",
     },
     {
-      img: "/crate3.png",
+      img: "/check/prod3.png",
       title: "Paper Dunnage Bags",
       size: "Eco-Friendly Transport Protection",
     },
     {
-      img: "/crate1.png",
+      img: "/check/prod4.webp",
       title: "Woven Air Bags",
       size: "Reusable & Durable Packaging",
     },
     {
-      img: "/crate1.png",
+      img: "/check/prod5.webp",
       title: "Custom Size Air Bags",
       size: "Tailored Cargo Safety Solutions",
     },
   ];
 
-   const products2 = [
+  const products2 = [
     {
-      img: "/check2.png",
+      img: "/check/prod1.webp",
       title: "Standard Dunnage Air Bag",
       size: "For Container & Truck Load Securing",
     },
     {
-      img: "/check1.webp",
+      img: "/check/prod2.png",
       title: "Heavy Duty Air Bag",
       size: "High Pressure Load Stabilization",
     },
     {
-      img: "/crate3.png",
+      img: "/check/prod3.png",
       title: "Paper Dunnage Bags",
       size: "Eco-Friendly Transport Protection",
     },
     {
-      img: "/crate1.png",
+      img: "/check/prod4.webp",
       title: "Woven Air Bags",
       size: "Reusable & Durable Packaging",
     },
     {
-      img: "/crate1.png",
+      img: "/check/prod5.webp",
       title: "Custom Size Air Bags",
       size: "Tailored Cargo Safety Solutions",
     },
   ];
 
-    const products3 = [
+ const products3 = [
     {
-      img: "/check2.png",
+      img: "/check/prod1.webp",
       title: "Standard Dunnage Air Bag",
       size: "For Container & Truck Load Securing",
     },
     {
-      img: "/check1.webp",
+      img: "/check/prod2.png",
       title: "Heavy Duty Air Bag",
       size: "High Pressure Load Stabilization",
     },
     {
-      img: "/crate3.png",
+      img: "/check/prod3.png",
       title: "Paper Dunnage Bags",
       size: "Eco-Friendly Transport Protection",
     },
     {
-      img: "/crate1.png",
+      img: "/check/prod4.webp",
       title: "Woven Air Bags",
       size: "Reusable & Durable Packaging",
     },
     {
-      img: "/crate1.png",
+      img: "/check/prod5.webp",
       title: "Custom Size Air Bags",
       size: "Tailored Cargo Safety Solutions",
     },
@@ -312,11 +312,11 @@ export default function ProductSection() {
 
     <>
     
-    <section className="bg-orange-50 py-20 px-10">
+    <section className="bg-orange-50 py-15 px-10">
 
       {/* HEADER */}
       <div className="text-center mb-14">
-        <h2 className="text-[34px] font-semibold">
+        <h2 className="text-[44px] font-semibold">
           <span className="text-orange-600">D PACK</span>{" "}
           <span className="text-orange-400 uppercase">Product Collections</span>
         </h2>
@@ -330,7 +330,7 @@ export default function ProductSection() {
         {/* LEFT SIDE */}
         <div className="w-[35%]">
 
-          <h3 className="text-[38px] font-semibold text-orange-600 mb-5">
+          <h3 className="text-[48px] font-semibold text-orange-600 mb-5">
             Dunnage Air Bags
           </h3>
 
@@ -358,9 +358,9 @@ export default function ProductSection() {
         </div>
 
         {/* RIGHT SIDE - SWIPER */}
-        <div className="w-[65%] relative overflow-hidden">
+        <div className="w-[65%]  relative overflow-hidden">
 
-          <div className="bg-[#F8F8F8] rounded-[60px] px-16 py-14 relative">
+          <div className="bg-[#F8F8F8] h-[500px] rounded-[50px] px-16 py-24 relative">
 
             {/* CUSTOM ARROWS */}
             <button className="swiper-prev absolute left-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-orange-500 hover:text-white transition">
@@ -385,7 +385,7 @@ export default function ProductSection() {
               }}
               centeredSlides={true}
               loop={true}
-              className="!overflow-visible"
+              className="!overflow-visible mt-10"
             >
               {products1.map((item, i) => (
                 <SwiperSlide key={i}>
@@ -438,9 +438,9 @@ export default function ProductSection() {
 
 
    {/* RIGHT SIDE - SWIPER */}
-        <div className="w-[65%] relative overflow-hidden">
+        <div className="w-[65%]  relative overflow-hidden">
 
-          <div className="bg-[#F8F8F8] rounded-[60px] px-16 py-14 relative">
+          <div className="bg-[#F8F8F8] h-[500px] rounded-[60px] px-16 py-14 relative">
 
             {/* CUSTOM ARROWS */}
             <button className="swiper-prev absolute left-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-orange-500 hover:text-white transition">
@@ -465,7 +465,7 @@ export default function ProductSection() {
               }}
               centeredSlides={true}
               loop={true}
-              className="!overflow-visible"
+              className="!overflow-visible mt-10"
             >
               {products2.map((item, i) => (
                 <SwiperSlide key={i}>
@@ -506,10 +506,10 @@ export default function ProductSection() {
 
 
         {/* LEFT SIDE */}
-        <div className="w-[35%]">
+        <div className="w-[35%] ">
 
-          <h3 className="text-[38px] font-semibold text-orange-600 mb-5">
-            Dunnage Air Bags
+          <h3 className="text-[48px] font-semibold text-orange-600 mb-5">
+           Aircolumn Bags
           </h3>
 
           <p className="text-gray-600 text-[18px] leading-[32px] mb-6">
@@ -553,8 +553,8 @@ export default function ProductSection() {
         {/* LEFT SIDE */}
         <div className="w-[35%]">
 
-          <h3 className="text-[38px] font-semibold text-orange-600 mb-5">
-            Dunnage Air Bags
+          <h3 className="text-[48px] font-semibold text-orange-600 mb-5">
+             Air Bags
           </h3>
 
           <p className="text-gray-600 text-[18px] leading-[32px] mb-6">
@@ -584,7 +584,7 @@ export default function ProductSection() {
    {/* RIGHT SIDE - SWIPER */}
         <div className="w-[65%] relative overflow-hidden">
 
-          <div className="bg-[#F8F8F8] rounded-[60px] px-16 py-14 relative">
+          <div className="bg-[#F8F8F8] h-[500px] rounded-[60px] px-16 py-14 relative">
 
             {/* CUSTOM ARROWS */}
             <button className="swiper-prev absolute left-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-orange-500 hover:text-white transition">
@@ -609,7 +609,7 @@ export default function ProductSection() {
               }}
               centeredSlides={true}
               loop={true}
-              className="!overflow-visible"
+              className="!overflow-visible mt-10"
             >
               {products2.map((item, i) => (
                 <SwiperSlide key={i}>

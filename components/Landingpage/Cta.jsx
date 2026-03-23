@@ -30,7 +30,7 @@ export default function ContactSection() {
 
           {/* ADDRESS */}
           <div className="flex items-start gap-5 mb-10">
-            <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 bg-[#2F4FA2] rounded-full flex items-center justify-center">
               <MapPin size={22} />
             </div>
 
@@ -46,7 +46,7 @@ export default function ContactSection() {
 
           {/* PHONE */}
           <div className="flex items-start gap-5 mb-10">
-            <div className="w-17 h-17 bg-orange-500 rounded-full flex items-center justify-center">
+            <div className="w-17 h-17 bg-[#2F4FA2] rounded-full flex items-center justify-center">
               <Phone size={22} />
             </div>
 
@@ -59,8 +59,8 @@ export default function ContactSection() {
           </div>
 
           {/* EMAIL */}
-          <div className="flex  items-start gap-5">
-            <div className="w-17 h-17  bg-orange-500 rounded-full flex items-center justify-center">
+          <div className="flex items-start gap-5">
+            <div className="w-17 h-17 bg-[#2F4FA2] rounded-full flex items-center justify-center">
               <Mail size={22} />
             </div>
 
@@ -76,20 +76,19 @@ export default function ContactSection() {
         {/* ================= RIGHT ================= */}
         <div className="bg-white/10 backdrop-blur-lg px-10 md:px-16 py-10 text-white">
 
-          <h3 className="text-3xl font-semibold mb-10">
+          <h3 className="text-3xl font-semibold mb-10 text-white">
             Request More Info
           </h3>
 
           {/* FORM */}
           <div className="space-y-8">
 
-            {/* INPUT */}
             {["Name", "Email", "Phone", "Product Required"].map((item, i) => (
               <div key={i}>
                 <label className="block mb-2 text-white">{item}</label>
                 <input
                   type="text"
-                  className="w-full bg-transparent border-b border-gray-400 focus:border-white outline-none py-2"
+                  className="w-full bg-transparent border-b border-gray-400 focus:border-[#59B347] outline-none py-2"
                 />
               </div>
             ))}
@@ -99,14 +98,14 @@ export default function ContactSection() {
               <label className="block mb-2 text-white">Message</label>
               <textarea
                 rows={3}
-                className="w-full bg-transparent border-b border-white focus:border-white outline-none py-2 resize-none"
+                className="w-full bg-transparent border-b border-white focus:border-[#59B347] outline-none py-2 resize-none"
               />
             </div>
 
             {/* SUBMIT BUTTON */}
             <div className="flex justify-end mt-6">
-              <button className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition">
-                <Send className="text-green-500" />
+              <button className="w-16 h-16 bg-gradient-to-r from-[#2F4FA2] to-[#59B347] rounded-full flex items-center justify-center shadow-lg hover:scale-105 transition">
+                <Send className="text-white" />
               </button>
             </div>
 

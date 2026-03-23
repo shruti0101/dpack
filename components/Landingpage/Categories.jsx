@@ -312,14 +312,14 @@ export default function ProductSection() {
 
     <>
     
-    <section className="bg-orange-50 py-15 px-10">
+    <section className="bg-[#E7F4F1] py-18 px-10">
 
       {/* HEADER */}
       <div className="text-center mb-14">
-        <h2 className="text-[44px] font-semibold">
-          <span className="text-orange-600">D PACK</span>{" "}
-          <span className="text-orange-400 uppercase">Product Collections</span>
-        </h2>
+     <h2 className="text-[48px] font-semibold">
+  <span className="text-[#2F4FA2]">D PACK</span>{" "}
+  <span className="text-[#59B347] uppercase">Product Collections</span>
+</h2>
         <p className="text-gray-600 text-[16px] mt-2">
           Advanced Dunnage Air Bags for Safe & Secure Cargo Transportation
         </p>
@@ -330,7 +330,7 @@ export default function ProductSection() {
         {/* LEFT SIDE */}
         <div className="w-[35%]">
 
-          <h3 className="text-[48px] font-semibold text-orange-600 mb-5">
+          <h3 className="text-[48px] font-semibold text-[#2F4FA2] mb-5">
             Dunnage Air Bags
           </h3>
 
@@ -346,13 +346,13 @@ export default function ProductSection() {
 
           {/* CTA */}
           <div className="flex items-center gap-4 cursor-pointer group">
-            <span className="text-orange-600 text-[18px] font-medium group-hover:underline">
-              View All
-            </span>
+            <span className="text-[#2F4FA2] text-[18px] font-medium group-hover:underline">
+    View All
+  </span>
 
-            <div className="w-10 h-10 border border-orange-500 rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:text-white transition">
-              →
-            </div>
+            <div className="w-10 h-10 border border-[#59B347] rounded-full flex items-center justify-center group-hover:bg-[#59B347] group-hover:text-white transition">
+    →
+  </div>
           </div>
 
         </div>
@@ -363,11 +363,11 @@ export default function ProductSection() {
           <div className="bg-[#F8F8F8] h-[500px] rounded-[50px] px-16 py-24 relative">
 
             {/* CUSTOM ARROWS */}
-            <button className="swiper-prev absolute left-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-orange-500 hover:text-white transition">
+            <button className="swiper-prev absolute left-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-green-500 hover:text-white transition">
               <ChevronLeft />
             </button>
 
-            <button className="swiper-next absolute right-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-orange-500 hover:text-white transition">
+            <button className="swiper-next absolute right-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-green-500 hover:text-white transition">
               <ChevronRight />
             </button>
 
@@ -406,7 +406,7 @@ export default function ProductSection() {
                       />
 
                       <h4 className={`mt-6 text-[14px] font-semibold ${
-                        isActive ? "text-orange-600" : "text-gray-700"
+                        isActive ? "text-green-600" : "text-gray-700"
                       }`}>
                         {item.title}
                       </h4>
@@ -428,7 +428,7 @@ export default function ProductSection() {
 
 {/* second */}
 
-  <section className="bg-white py-9 px-10">
+  <section className="bg-white py-20 px-10">
 
      
 
@@ -443,11 +443,11 @@ export default function ProductSection() {
           <div className="bg-[#F8F8F8] h-[500px] rounded-[60px] px-16 py-14 relative">
 
             {/* CUSTOM ARROWS */}
-            <button className="swiper-prev absolute left-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-orange-500 hover:text-white transition">
+            <button className="swiper-prev absolute left-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-green-500 hover:text-white transition">
               <ChevronLeft />
             </button>
 
-            <button className="swiper-next absolute right-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-orange-500 hover:text-white transition">
+            <button className="swiper-next absolute right-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-green-500 hover:text-white transition">
               <ChevronRight />
             </button>
 
@@ -486,7 +486,7 @@ export default function ProductSection() {
                       />
 
                       <h4 className={`mt-6 text-[14px] font-semibold ${
-                        isActive ? "text-orange-600" : "text-gray-700"
+                        isActive ? "text-green-600" : "text-gray-700"
                       }`}>
                         {item.title}
                       </h4>
@@ -508,7 +508,7 @@ export default function ProductSection() {
         {/* LEFT SIDE */}
         <div className="w-[35%] ">
 
-          <h3 className="text-[48px] font-semibold text-orange-600 mb-5">
+          <h3 className="text-[48px] font-semibold text-[#2F4FA2] mb-5">
            Aircolumn Bags
           </h3>
 
@@ -523,15 +523,15 @@ export default function ProductSection() {
           </p>
 
           {/* CTA */}
-          <div className="flex items-center gap-4 cursor-pointer group">
-            <span className="text-orange-600 text-[18px] font-medium group-hover:underline">
-              View All
-            </span>
+       <div className="flex items-center gap-4 cursor-pointer group">
+  <span className="text-[#2F4FA2] text-[18px] font-medium group-hover:underline">
+    View All
+  </span>
 
-            <div className="w-10 h-10 border border-orange-500 rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:text-white transition">
-              →
-            </div>
-          </div>
+  <div className="w-10 h-10 border border-[#59B347] rounded-full flex items-center justify-center group-hover:bg-[#59B347] group-hover:text-white transition">
+    →
+  </div>
+</div>
 
         </div>
 
@@ -543,7 +543,7 @@ export default function ProductSection() {
     {/* third */}
 
 
-     <section className="bg-orange-50 py-9 px-10">
+     <section className="bg-[#E7F4F1] py-20 px-10">
 
      
 
@@ -553,7 +553,7 @@ export default function ProductSection() {
         {/* LEFT SIDE */}
         <div className="w-[35%]">
 
-          <h3 className="text-[48px] font-semibold text-orange-600 mb-5">
+          <h3 className="text-[48px] font-semibold text-[#2F4FA2] mb-5">
              Air Bags
           </h3>
 
@@ -569,13 +569,13 @@ export default function ProductSection() {
 
           {/* CTA */}
           <div className="flex items-center gap-4 cursor-pointer group">
-            <span className="text-orange-600 text-[18px] font-medium group-hover:underline">
-              View All
-            </span>
+             <span className="text-[#2F4FA2] text-[18px] font-medium group-hover:underline">
+    View All
+  </span>
 
-            <div className="w-10 h-10 border border-orange-500 rounded-full flex items-center justify-center group-hover:bg-orange-500 group-hover:text-white transition">
-              →
-            </div>
+  <div className="w-10 h-10 border border-[#59B347] rounded-full flex items-center justify-center group-hover:bg-[#59B347] group-hover:text-white transition">
+    →
+  </div>
           </div>
 
         </div>
@@ -587,11 +587,11 @@ export default function ProductSection() {
           <div className="bg-[#F8F8F8] h-[500px] rounded-[60px] px-16 py-14 relative">
 
             {/* CUSTOM ARROWS */}
-            <button className="swiper-prev absolute left-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-orange-500 hover:text-white transition">
+            <button className="swiper-prev absolute left-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-green-500 hover:text-white transition">
               <ChevronLeft />
             </button>
 
-            <button className="swiper-next absolute right-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-orange-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-orange-500 hover:text-white transition">
+            <button className="swiper-next absolute right-[-25px] top-1/2 -translate-y-1/2 w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center shadow z-10 hover:bg-green-500 hover:text-white transition">
               <ChevronRight />
             </button>
 
@@ -630,7 +630,7 @@ export default function ProductSection() {
                       />
 
                       <h4 className={`mt-6 text-[14px] font-semibold ${
-                        isActive ? "text-orange-600" : "text-gray-700"
+                        isActive ? "text-green-600" : "text-gray-700"
                       }`}>
                         {item.title}
                       </h4>
@@ -682,7 +682,7 @@ export default function ProductSection() {
             <ClipboardList
               size={72}
               strokeWidth={1.5}
-              className="mx-auto text-orange-500 mb-6"
+              className="mx-auto text-[#59B347] mb-6"
             />
 
             <h3 className="text-[18px] font-bold text-[#0F3B5F] mb-4 leading-tight">
@@ -702,7 +702,7 @@ export default function ProductSection() {
             <Box
               size={72}
               strokeWidth={1.5}
-              className="mx-auto text-orange-500 mb-6"
+              className="mx-auto text-[#59B347] mb-6"
             />
 
             <h3 className="text-[18px] font-bold text-[#0F3B5F] mb-4 leading-tight">
@@ -722,7 +722,7 @@ export default function ProductSection() {
             <Settings
               size={72}
               strokeWidth={1.5}
-              className="mx-auto text-orange-500 mb-6"
+              className="mx-auto text-[#59B347] mb-6"
             />
 
             <h3 className="text-[18px] font-bold text-[#0F3B5F] mb-4 leading-tight">

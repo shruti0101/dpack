@@ -87,11 +87,11 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-[110vh] overflow-hidden bg-gray-100">
+    <section className="relative w-full h-[110vh] overflow-hidden bg-white">
 
       {/* LIGHT BG SHAPE */}
      <motion.div
-  className="absolute right-[-180px] top-[-100px] w-[1000px] h-[800px] bg-white opacity-90 "
+  className="absolute right-[-180px] top-[-100px] w-[1000px] h-[800px] bg-[#E7F4F1] opacity-60 "
   
   animate={{
     borderRadius: [
@@ -163,10 +163,10 @@ export default function HeroSection() {
             transition={{ delay: 0.2 }}
             className="text-[68px] font-bold leading-tight"
           >
-            <span className="text-orange-700">
+            <span className="text-[#2F4FA2]">
               {slides[active].highlightBlue}
             </span>{" "}
-            <span className="text-orange-500">
+            <span className="text-[#59B347]">
               {slides[active].highlightGreen}
             </span>
           </motion.h1>
@@ -181,9 +181,9 @@ export default function HeroSection() {
             {slides[active].desc}
           </motion.p>
 
-          <button className="bg-gradient-to-r from-[#c96214] to-[#e76a17] text-white px-6 py-3 rounded-full flex items-center gap-3">
+          <button className="bg-gradient-to-r from-[#2F4FA2] to-[#59B347] text-white px-6 py-3 rounded-full flex items-center gap-3">
             DOWNLOAD CATALOGUE
-            <span className="bg-white text-blue-600 w-8 h-8 flex items-center justify-center rounded-full">
+            <span className="bg-white text-[#2F4FA2] w-8 h-8 flex items-center justify-center rounded-full">
               →
             </span>
           </button>
@@ -250,7 +250,7 @@ export default function HeroSection() {
 
     {/* 🔥 ACTIVE PROGRESS LINE */}
     <div
-      className="absolute left-[calc(100%-6px)] top-0 w-[2px] bg-orange-500 transition-all duration-500"
+      className="absolute left-[calc(100%-6px)] top-0 w-[2px] bg-[#59B347] transition-all duration-500"
       style={{
         height: `${(active / (categories.length - 1)) * 100}%`,
       }}
@@ -266,7 +266,7 @@ export default function HeroSection() {
         <span
           className={`text-md ${
             index === active
-              ? "text-orange-600 font-semibold"
+              ? "text-[#59B347] font-semibold"
               : "text-gray-400"
           }`}
         >
@@ -277,8 +277,8 @@ export default function HeroSection() {
         <div
           className={`w-3 h-3 rounded-full border-2 z-10 ${
             index === active
-              ? "border-orange-500 bg-orange-500"
-              : "border-gray-300 bg-white"
+              ? " bg-[#59B347] "
+              : "border-[#59B347] bg-white"
           }`}
         />
       </div>

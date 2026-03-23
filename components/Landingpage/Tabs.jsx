@@ -65,7 +65,7 @@ export default function PremiumTabs() {
 
   return (
     <section className="relative w-full py-6 md:py-20 overflow-hidden">
-      
+
       {/* Background */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -87,27 +87,27 @@ export default function PremiumTabs() {
       </AnimatePresence>
 
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center px-6 relative z-10">
-        
+
         {/* LEFT */}
         <div className="flex flex-col">
-          
+
           {/* Tabs */}
-          <div className="flex flex-wrap border-b border-orange-400/40 mb-8">
+          <div className="flex flex-wrap border-b border-[#2F4FA2]/30 mb-8">
             {tabs.map((tab, index) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveIndex(index)}
                 className={`relative px-4 py-2 text-lg md:text-xl font-semibold transition-all ${
                   index === activeIndex
-                    ? "text-orange-600"
-                    : "text-gray-600 hover:text-orange-500"
+                    ? "text-[#2F4FA2]"
+                    : "text-gray-600 hover:text-[#59B347]"
                 }`}
               >
                 {tab.mainTitle}
                 {index === activeIndex && (
                   <motion.div
                     layoutId="underline"
-                    className="absolute left-0 right-0 bottom-0 h-[3px] bg-orange-500 rounded-full"
+                    className="absolute left-0 right-0 bottom-0 h-[3px] bg-[#59B347] rounded-full"
                   />
                 )}
               </button>
@@ -123,7 +123,7 @@ export default function PremiumTabs() {
               exit={{ opacity: 0, y: -30 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl md:text-4xl font-extrabold text-orange-700 mb-5">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-[#2F4FA2] mb-5">
                 {tabs[activeIndex].subTitle}
               </h2>
 
@@ -137,7 +137,7 @@ export default function PremiumTabs() {
               <ul className="space-y-3">
                 {tabs[activeIndex].points.map((point, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <FaCheckCircle className="text-orange-500 text-xl mt-1 flex-shrink-0" />
+                    <FaCheckCircle className="text-[#59B347] text-xl mt-1 flex-shrink-0" />
                     <span className="text-gray-800 text-base md:text-lg leading-snug">
                       {point}
                     </span>

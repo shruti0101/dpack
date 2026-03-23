@@ -16,9 +16,9 @@ export default function Navbar() {
       label: "Products",
       link: "/products",
       dropdown: [
-        { label: "Solutions for Plastics", link: "/tio2-for-plastics" },
-        { label: "Solutions for Laminates", link: "/tio2-for-laminates" },
-        { label: "Solutions for Coatings", link: "/tio2-for-coatings" },
+        { label: "Dunnage Bags", link: "/products/dunnage-bags" },
+        // { label: "Solutions for Laminates", link: "/tio2-for-laminates" },
+        // { label: "Solutions for Coatings", link: "/tio2-for-coatings" },
       ],
     },
     { label: "Industries", link: "/industries" },
@@ -65,19 +65,19 @@ export default function Navbar() {
                 </Link>
 
                 {/* 🔥 HOVER BACKGROUND (KEY PREMIUM PART) */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#D75F3B] to-[#E1957D] opacity-0 group-hover:opacity-100 transition duration-300 blur-sm"></div>
+                {/* <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#D75F3B] to-[#E1957D] opacity-0 group-hover:opacity-100 transition duration-300 blur-sm"></div> */}
 
                 {/* 🔥 ACTIVE PILL */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#D75F3B] to-[#E1957D] opacity-0 group-hover:text-white group-hover:opacity-20 transition duration-300"></div>
+                {/* <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#D75F3B] to-[#E1957D] opacity-0 group-hover:text-white group-hover:opacity-20 transition duration-300"></div> */}
 
                 {/* DROPDOWN */}
                 {item.dropdown && openMenu === item.label && (
-                  <div className="absolute top-[120%] left-1/2 -translate-x-1/2 w-72 bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl p-3 border border-white/30">
+                  <div className="absolute top-[105%] left-1/2 -translate-x-1/2 w-72 bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl p-3 border border-white/30">
                     {item.dropdown.map((d, i) => (
                       <Link
                         key={i}
                         href={d.link}
-                        className="block px-4 py-2 rounded-lg hover:bg-[#0082C8] hover:text-white transition"
+                        className="block px-4 py-2 rounded-lg hover:bg-blue-100  transition"
                       >
                         {d.label}
                       </Link>
@@ -94,16 +94,16 @@ export default function Navbar() {
 
             <button
               onClick={() => setIsFormOpen(true)}
-              className="px-5 py-2 rounded-full bg-gradient-to-r from-orange-500 to-orange-800 text-white font-semibold shadow-lg hover:scale-105 transition"
+              className="px-5 py-3 rounded-full bg-gradient-to-r from-[#2F4FA2] to-[#59B347] text-white font-semibold shadow-lg hover:scale-105 transition"
             >
               Request Quote
             </button>
 
             <Link
               href="/contact-us"
-              className="px-5 py-2 rounded-full border border-orange-300 hover:border-[#0082C8] hover:text-[#0082C8] transition"
+              className="px-5 py-2 rounded-full border border-blue-600 hover:border-[#0082C8] hover:text-[#0082C8] transition"
             >
-              Contact
+              Contact Us
             </Link>
 
           </div>

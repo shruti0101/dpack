@@ -129,7 +129,7 @@ ${
               >
                 <span
                   className={`text-lg font-semibold transition ${
-                    isOpen ? "text-orange-600" : "text-gray-900"
+                    isOpen ? "text-green-600" : "text-gray-900"
                   }`}
                 >
                   {faq.question}
@@ -137,7 +137,7 @@ ${
 
                 <FaChevronDown
                   className={`ml-4 transition-transform duration-300 ${
-                    isOpen ? "rotate-180 text-orange-500" : "text-gray-500"
+                    isOpen ? "rotate-180 text-blue-500" : "text-gray-500"
                   }`}
                 />
               </button>
@@ -157,7 +157,7 @@ ${
                         key={i}
                         className={`mb-2 ${
                           line.includes("•")
-                            ? "pl-4 relative before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-orange-500 before:rounded-full"
+                            ? "pl-4 relative before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-blue-500 before:rounded-full"
                             : ""
                         }`}
                       >

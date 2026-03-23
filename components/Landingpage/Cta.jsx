@@ -10,7 +10,7 @@ export default function ContactSection() {
     >
 
       {/* 🔥 DARK OVERLAY */}
-      <div className="absolute inset-0 bg-black/40 blur-2xl"></div>
+      <div className="absolute inset-0 bg-black/20 blur-2xl"></div>
 
       <div className="relative w-full max-w-7xl mx-auto grid md:grid-cols-2">
 
@@ -31,7 +31,7 @@ export default function ContactSection() {
           {/* ADDRESS */}
           <div className="flex items-start gap-5 mb-10">
             <div className="w-16 h-16 bg-[#2F4FA2] rounded-full flex items-center justify-center">
-              <MapPin size={22} />
+              <MapPin size={27} />
             </div>
 
             <div>
@@ -47,7 +47,7 @@ export default function ContactSection() {
           {/* PHONE */}
           <div className="flex items-start gap-5 mb-10">
             <div className="w-17 h-17 bg-[#2F4FA2] rounded-full flex items-center justify-center">
-              <Phone size={22} />
+              <Phone size={26} />
             </div>
 
             <div>
@@ -61,7 +61,7 @@ export default function ContactSection() {
           {/* EMAIL */}
           <div className="flex items-start gap-5">
             <div className="w-17 h-17 bg-[#2F4FA2] rounded-full flex items-center justify-center">
-              <Mail size={22} />
+              <Mail size={26} />
             </div>
 
             <div>

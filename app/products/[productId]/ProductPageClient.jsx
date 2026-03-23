@@ -170,15 +170,15 @@ export default function ProductPage({ params }) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {[{
-              title: "Request a Sample",
+              title: "Get In Touch",
               link: "/contact-us"
             },
             {
-              title: "Safety Data Sheets (SDS)",
+              title: "Download Brochure",
               link: product.pdfs?.sds || "#"
             },
             {
-              title: "Technical Data Sheets (TDS)",
+              title: "Request a Quote",
               link: product.pdfs?.tds || "#"
             }].map((item, i) => (
 

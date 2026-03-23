@@ -181,12 +181,24 @@ export default function HeroSection() {
             {slides[active].desc}
           </motion.p>
 
-          <button className="bg-gradient-to-r from-[#2F4FA2] to-[#59B347] text-white px-6 py-3 rounded-full flex items-center gap-3">
+
+<div className="flex gap-3">
+
+
+          <button className="bg-gradient-to-r from-[#2F4FA2] to-[#59B347] text-white px-4 py-3 rounded-full flex items-center gap-3">
             DOWNLOAD CATALOGUE
             <span className="bg-white text-[#2F4FA2] w-8 h-8 flex items-center justify-center rounded-full">
               →
             </span>
           </button>
+
+              <button className="border-green-600 border-2 text-black px-4 py-3 rounded-full flex items-center gap-3">
+           CONTACT US
+            <span className="bg-green-600 text-white w-8 h-8 flex items-center justify-center rounded-full">
+              →
+            </span>
+          </button>
+</div>
         </div>
 
         {/* RIGHT VISUAL */}

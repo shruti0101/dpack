@@ -72,7 +72,7 @@ export default function Navbar() {
 
                 {/* DROPDOWN */}
                 {item.dropdown && openMenu === item.label && (
-                  <div className="absolute top-[105%] left-1/2 -translate-x-1/2 w-72 bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl p-3 border border-white/30">
+                  <div className="absolute top-[90%] left-1/2 -translate-x-1/2 w-72 bg-white/90 backdrop-blur-xl rounded-2xl shadow-xl p-3 border border-white/30">
                     {item.dropdown.map((d, i) => (
                       <Link
                         key={i}

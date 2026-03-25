@@ -10,9 +10,9 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: "Titanium Dioxide Manufacturers in Germany | Salford",
+  title: "dpack",
   description:
-    "Salford is one of the leading Titanium Dioxide manufacturers in Germany, offering premium-grade TiO₂ for paints, plastics, coatings, and industrial applications.",
+    "dpack",
   icons: {
     icon: "/logo.webp",
   },

@@ -7,7 +7,7 @@ import Products from "@/components/Landingpage/Products";
 import Tabs from "@/components/Landingpage/Tabs"
 import Trust from "@/components/Landingpage/Trust"
 import Faq from "@/components/Landingpage/Faq";
-
+import Clientele from "@/components/Landingpage/Clientele";
 import Cta from "@/components/Landingpage/Cta";
 import ProductCategoriesSection from "@/components/Landingpage/Categories";
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
 <Whychoose></Whychoose>
 {/* <Industries></Industries> */}
 
-{/* <Trust></Trust> */}
+<Clientele></Clientele>
 
 <Tabs></Tabs>
 <Cta></Cta>

@@ -35,7 +35,7 @@ export default function AboutSection() {
           </h2>
 
           <p className="text-black  text-lg mb-4 leading-relaxed">
-            At Dpack Packaging Solutions, we specialize in manufacturing high-quality Dunnage Bags designed to secure cargo during transportation and prevent load shifting in containers, trucks, and railcars.
+            At Dpack  we specialize in manufacturing high-quality Dunnage Bags designed to secure cargo during transportation and prevent load shifting in containers, trucks, and railcars.
           </p>
 
           <p className="text-black text-lg mb-4 leading-relaxed">

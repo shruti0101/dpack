@@ -62,7 +62,7 @@ export default function HomeProducts() {
           </h2>
 
           <p className="text-gray-600 text-base sm:text-lg max-w-5xl mx-auto leading-relaxed">
-            Explore our diverse portfolio of Titanium Dioxide (TiO₂) products, engineered for superior brightness, opacity, and durability across plastics, coatings, and laminates.
+            Explore our diverse portfolio of packaging solutions, engineered for superior performance, capacity, and durability best suited for cargo transportation.
           </p>
         </div>
 

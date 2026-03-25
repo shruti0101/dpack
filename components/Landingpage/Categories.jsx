@@ -317,7 +317,7 @@ export default function ProductSection() {
       {/* HEADER */}
       <div className="text-center mb-14">
      <h2 className="text-[48px] font-semibold">
-  <span className="text-[#2F4FA2]">D PACK</span>{" "}
+  <span className="text-[#2F4FA2]">DPACK</span>{" "}
   <span className="text-[#59B347] uppercase">Product Collections</span>
 </h2>
         <p className="text-gray-600 text-[16px] mt-2">

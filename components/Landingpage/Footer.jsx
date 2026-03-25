@@ -128,7 +128,7 @@ const Footer = () => {
         <div className="text-center text-xs sm:text-sm text-white">
           © {new Date().getFullYear()}{" "}
           <span className="text-[#59B347] font-medium tracking-wide">
-            D Pack Packaging Solutions
+            DPACK
           </span>{" "}
           — All Rights Reserved.
         </div>
